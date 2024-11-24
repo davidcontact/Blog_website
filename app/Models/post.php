@@ -13,4 +13,8 @@ class post extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function category_ide(){
+        return $this->belongsTo(category::class);
+    }
 }

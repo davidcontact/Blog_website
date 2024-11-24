@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 // public
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ApiController;
 
+Route::get('/DataPost', [ApiController::class, 'Api']);
 
 
 // admin
