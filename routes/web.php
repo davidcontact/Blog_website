@@ -45,6 +45,8 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 
 
 // Login 
+Route::get('/Create', [AuthController::class, 'create'])->name('create_admin');
+Route::post('/Store', [AuthController::class, 'storeAuthenticate'])->name('Store_admin');
 Route::get('/Login', [AuthController::class, 'login'])->name('login');
 Route::post('/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
